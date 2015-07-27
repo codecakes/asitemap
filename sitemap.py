@@ -187,8 +187,6 @@ class GenerateSitemap(Command):
                                                     user.artwork_meta_aid_file)
             each_user_products_file = os.path.join(user_products_path, \
                                                     user.product_meta_pid_file)
-            if not os.path.isfile(each_user_artworks_file): os.makedirs(each_user_artworks_file)
-            if not os.path.isfile(each_user_products_file): os.makedirs(each_user_products_file)
 
             for product_detail in all_products_cursor:
 
