@@ -56,3 +56,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#Package dirs
+user_config/
