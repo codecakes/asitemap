@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import urlparse
 import errno
@@ -15,6 +17,7 @@ import jinja2
 app = Flask(__name__)
 
 app.config['MONGODB_DB'] = 'sitemap'
+
 db = MongoEngine(app)
 
 manager = Manager(app)
