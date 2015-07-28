@@ -15,7 +15,6 @@ import jinja2
 app = Flask(__name__)
 
 app.config['MONGODB_DB'] = 'sitemap'
-#app.config['MONGODB_DB'] = os.path.abspath('sitemap')
 db = MongoEngine(app)
 
 manager = Manager(app)
@@ -196,11 +195,11 @@ class GenerateSitemap(Command):
 
                         if user.uid == artwork.uid:
                             with open(each_user_artworks_file, 'wb+') as artwork_file:
-                                artwork_file.write(artwork.aid)
+                                artwork_file.write(str(artwork.aid))
                                 artwork_file.write("\n")
 
                             with open(each_user_products_file, 'wb+') as product_file:
-                                product_file.write(product_detail.pid)
+                                product_file.write(str(product_detail.pid))
                                 product_file.write("\n")
 
 
